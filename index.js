@@ -7,6 +7,7 @@ module.exports = neutrino => {
   neutrino.options.output = 'lib';
 
   neutrino.use(eslint, {
+    include: [neutrino.options.source],
     eslint: {
       rules: {
         // Disallow spacing inside array brackets
